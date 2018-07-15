@@ -1,2 +1,2 @@
 # Gitbot
-A gitbot
+A git bot
