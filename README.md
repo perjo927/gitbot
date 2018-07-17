@@ -3,5 +3,4 @@ A git bot
 
 
 ## Getting started
-TBA
-
+TODO
