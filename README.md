@@ -1,5 +1,5 @@
 # Gitbot
-A git bot
+A git bot.
 
 
 ## Getting started
