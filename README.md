@@ -23,5 +23,5 @@ You need to have **Git** installed, on **Windows**.
 * Run `../gitbot.ps1`
 
 ### Scheduled
-TODO
+TODO.
 
