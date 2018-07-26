@@ -4,7 +4,7 @@ Makes Your Git Stats Great
 #>
 
 function CreateBranchName {
-    $name = "hello-branch"
+    $name = "commit-and-push"
 
     Return $name
 }
