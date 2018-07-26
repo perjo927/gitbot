@@ -6,7 +6,7 @@ You need to have **Git** installed, on **Windows**.
 
 ## Usage
 
-### Manually
+### Manual Example
 
 * Copy the script file ( [gitbot.ps1](https://github.com/perjo927/gitbot/blob/master/gitbot.ps1)) to a directory
 
@@ -22,6 +22,6 @@ You need to have **Git** installed, on **Windows**.
 
 * Run `../gitbot.ps1`
 
-### Scheduled
+### Scheduled Example
 TODO.
 
