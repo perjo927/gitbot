@@ -4,7 +4,7 @@ Makes Your Git Stats Great
 #>
 
 function CreateBranchName {
-    $name = "hello-branch"
+    $name = "hello-master"
 
     Return $name
 }
@@ -25,16 +25,6 @@ function CreateContent {
     ### add file and write to it
 }
 
-function MergeBranch {
-    param([string]$branch)
-
-    git checkout master
-    git pull origin master
-    git merge $branch
-    git push origin master
-}
-
-
 function CreateMessage {
     param([string]$type, [string]$name)
 
@@ -51,10 +41,19 @@ function CommitAndPush {
     git push
 }
 
-#$branchType = "feature" 
-#$branchName = CreateBranchName
-#$branch = "$branchType/$branchName" 
-#CreateBranch $branch
+function MergeBranch {
+    param([string]$branch)
+
+    git checkout master
+    git pull origin master
+    git merge $branch
+    git push origin master
+}
+
+$branchType = "feature" 
+$branchName = CreateBranchName
+$branch = "$branchType/$branchName" 
+CreateBranch $branch
 $msg = CreateMessage $branchType, $branchName
 CommitAndPush $msg
-# MergeBranch
+MergeBranch
