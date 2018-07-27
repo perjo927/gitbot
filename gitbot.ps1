@@ -21,8 +21,6 @@ function CreateBranch {
 }
 
 function CreateContent {
-    #param([string]$branch)
-
     $text = 'const str = `Hello World`;'
 
     # Create:
