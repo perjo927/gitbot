@@ -30,7 +30,7 @@ function CreateBranch {
 function CreateContent {
     param([string]$word)
 
-    $text1 = "const str = `Hello $word`;"
+    $text1 = "const str = 'Hello $word';"
     $text2 = "console.log(str);"
     $text = "$text1 $text2"
 
