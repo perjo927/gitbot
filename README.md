@@ -18,11 +18,8 @@ You need to have **Git** installed, on **Windows**.
 
     > cd <*name of repo*>
 
-* Do something, or nothing
-
 * Run `../gitbot.ps1`
 
 ### Scheduled example
 
 TODO.
-
