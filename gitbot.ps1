@@ -3,9 +3,16 @@ Gitbot
 Makes Your Git Stats Great
 #>
 
-function CreateBranchName {
-    # TODO: randomize name!
-    $name = "random-branch"
+function GenerateName {
+    $raw = Get-Content -Path words.txt
+    
+    $number1 = Get-Random -Maximum 399
+    $number2 = Get-Random -Maximum 399
+
+    $random1 = $raw[$number1]
+    $random2 = $raw[$number2]
+
+    $name = "$random1-$random2"
 
     Return $name
 }
@@ -21,19 +28,23 @@ function CreateBranch {
 }
 
 function CreateContent {
-    $text = 'const str = `Hello World`;'
+    param([string]$word)
 
-    # Create:
-    $text | Set-Content 'file.js' # TODO: Randomize name
+    $text1 = "const str = `Hello $word`;"
+    $text2 = "console.log(str);"
+    $text = "$text1 $text2"
+
+    # Create
+    $text | Set-Content "$word.js"
 
     # Append
     #text | Add-Content 'file.js'    
 }
 
 function CreateMessage {
-    param([string]$type, [string]$name)
+    param([string]$name, $msg)
 
-    $text = "$type($name): test"
+    $text = "${name}: $msg"
 
     Return $text
 }
@@ -56,10 +67,11 @@ function MergeBranch {
 }
 
 $branchType = "feature" 
-$branchName = CreateBranchName
-$branch = "$branchType/$branchName" 
+$name = GenerateName
+$branch = "$branchType/$name" 
 CreateBranch $branch
-$msg = CreateMessage $branchType, $branchName
-CreateContent
+$commitmsg = GenerateName
+$msg = CreateMessage $branch $commitmsg
+CreateContent $name
 CommitAndPush $msg
 MergeBranch $branch
