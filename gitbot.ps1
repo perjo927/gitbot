@@ -5,7 +5,7 @@ Makes Your Git Stats Great
 
 function CreateBranchName {
     # TODO: randomize name!
-    $name = "add-file"
+    $name = "random-branch"
 
     Return $name
 }
@@ -64,4 +64,4 @@ CreateBranch $branch
 $msg = CreateMessage $branchType, $branchName
 CreateContent
 CommitAndPush $msg
-MergeBranch
+MergeBranch $branch
