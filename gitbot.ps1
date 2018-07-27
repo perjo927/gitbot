@@ -4,7 +4,8 @@ Makes Your Git Stats Great
 #>
 
 function CreateBranchName {
-    $name = "commit-and-push-to-master"
+    # TODO: randomize name!
+    $name = "add-file"
 
     Return $name
 }
@@ -20,9 +21,15 @@ function CreateBranch {
 }
 
 function CreateContent {
-    param([string]$branch)
+    #param([string]$branch)
 
-    ### add file and write to it
+    $text = 'const str = `Hello World`;'
+
+    # Create:
+    $text | Set-Content 'file.js' # TODO: Randomize name
+
+    # Append
+    #text | Add-Content 'file.js'    
 }
 
 function CreateMessage {
@@ -55,5 +62,6 @@ $branchName = CreateBranchName
 $branch = "$branchType/$branchName" 
 CreateBranch $branch
 $msg = CreateMessage $branchType, $branchName
+CreateContent
 CommitAndPush $msg
 MergeBranch
