@@ -22,4 +22,5 @@ You need to have **Git** installed, on **Windows**.
 
 ### Scheduling
 
-Modify the file `schedule_task.ps1` to your needs and run it.
+* Modify the file `schedule_task.ps1` to your needs and execute it with the argument `-path`:
+    > .\schedule_task.ps1 -path <*C:\path to gitbot.ps1*>
