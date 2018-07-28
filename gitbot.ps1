@@ -3,7 +3,7 @@ Gitbot
 Makes Your Git Stats Great
 #>
 
-param([string]$path="C:\") #Must be the first statement in your script
+param([string]$path="C:\")
 
 function GenerateName {
     $filepath = Resolve-Path "words.txt"
