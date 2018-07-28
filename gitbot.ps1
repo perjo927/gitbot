@@ -4,7 +4,7 @@ Makes Your Git Stats Great
 #>
 
 function GenerateName {
-    $raw = Get-Content -Path words.txt
+    $raw = Get-Content -Resolve-Path words.txt
     
     $number1 = Get-Random -Maximum 399
     $number2 = Get-Random -Maximum 399
