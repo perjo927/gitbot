@@ -67,6 +67,7 @@ function MergeBranch {
     git push origin master
 }
 
+Set-Location -Path C:\Code\gitbot\gitbot
 $branchType = "feature" 
 $name = GenerateName
 $branch = "$branchType/$name" 
