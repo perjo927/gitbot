@@ -3,6 +3,8 @@ Gitbot
 Makes Your Git Stats Great
 #>
 
+param([string]$path="C:\") #Must be the first statement in your script
+
 function GenerateName {
     $filepath = Resolve-Path "words.txt"
     $raw = Get-Content -Path $filepath
@@ -67,7 +69,7 @@ function MergeBranch {
     git push origin master
 }
 
-Set-Location -Path C:\Code\gitbot\gitbot
+Set-Location -Path $path
 $branchType = "feature" 
 $name = GenerateName
 $branch = "$branchType/$name" 
