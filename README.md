@@ -1,5 +1,5 @@
 # Gitbot
-A git bot for Windows.
+A git bot for Windows. Visit https://medium.com/@djpjgj/make-your-github-stats-great-again-a830cb6e3428 for background info.
 
 ## Prerequisites
 You need to have **Git** installed, on **Windows**.
