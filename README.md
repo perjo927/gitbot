@@ -13,7 +13,7 @@ You need to have **Git** installed, on **Windows**.
 * Store your Git credentials
 > git config credential.helper store
 
-* Copy the script file ( [gitbot.ps1](https://github.com/perjo927/gitbot/blob/master/gitbot.ps1)) to a directory
+* Copy the script file ( [gitbot.ps1](https://github.com/perjo927/gitbot/blob/master/gitbot.ps1)) and the dictionary - [words.txt](https://github.com/perjo927/gitbot/blob/master/words.txt) - to a directory
 
 * Create a repo
     > git clone <*name of repo*>
