@@ -68,6 +68,12 @@ function MergeBranch {
     git merge $branch
     git push origin master
 }
+function DeleteBranch {
+    param([string]$branch)
+    
+    git branch -D $branch
+    git push origin --delete $branch
+}
 
 Set-Location -Path $path
 $branchType = "feature" 
@@ -79,5 +85,5 @@ $msg = CreateMessage $branch $commitmsg
 CreateContent $name
 CommitAndPush $msg
 MergeBranch $branch
-git branch -D $branch
+DeleteBranch $branch
 git push origin --delete $branch
