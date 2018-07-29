@@ -1,7 +1,9 @@
 # Gitbot
+
 A git bot for Windows. Visit https://medium.com/@djpjgj/make-your-github-stats-great-again-a830cb6e3428 for background info.
 
 ## Prerequisites
+
 You need to have **Git** installed, on **Windows**.
 
 ## Usage
@@ -18,9 +20,10 @@ You need to have **Git** installed, on **Windows**.
 
     > cd <*name of repo*>
 
-* Run `../gitbot.ps1`
+* Run the script
+    > ../gitbot.ps1 -path <*path to gitbot.ps1*>
 
 ### Scheduling
 
 * Modify the file `schedule_task.ps1` to your needs and execute it with the argument `-path`:
-    > .\schedule_task.ps1 -path <*C:\path to gitbot.ps1*>
+    > .\schedule_task.ps1 -path <*path to gitbot.ps1*>

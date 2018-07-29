@@ -79,3 +79,5 @@ $msg = CreateMessage $branch $commitmsg
 CreateContent $name
 CommitAndPush $msg
 MergeBranch $branch
+git branch -D $branch
+git push origin --delete $branch
