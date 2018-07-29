@@ -21,7 +21,7 @@ You need to have **Git** installed, on **Windows**.
     > cd <*name of repo*>
 
 * Run the script
-    > ../gitbot.ps1 -path <*path to gitbot.ps1*>
+    > ../gitbot.ps1 -path <*path to repo*>
 
 ### Scheduling
 
