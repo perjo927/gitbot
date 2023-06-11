@@ -8,7 +8,7 @@ GitBot is a PowerShell script designed to automate common Git operations and sim
 
 1. Ensure that you have PowerShell or Command prompt installed on your system.
 
-2. Clone the GitBot repository to your local machine using the following command after navigationg to the directory of your choice:
+2. Clone the GitBot repository to your local machine using the following command after navigating to the directory of your choice:
 
    ```
    git clone https://github.com/perjo927/gitbot.git
