@@ -37,12 +37,17 @@ function CreateContent {
     $text2 = "console.log(str);"
     $text = "$text1 $text2"
 
-    # Create
-    $text | Set-Content "$word.js"
+    # Create the folder if it doesn't exist
+    $folderPath = "js-files"
+    if (-not (Test-Path $folderPath -PathType Container)) {
+        New-Item -Path $folderPath -ItemType Directory | Out-Null
+    }
 
-    # Append
-    #text | Add-Content 'file.js'    
+    # Create the JavaScript file inside the folder
+    $filePath = Join-Path $folderPath "$word.js"
+    $text | Set-Content $filePath
 }
+
 
 function CreateMessage {
     param([string]$name, $msg)
@@ -55,7 +60,7 @@ function CreateMessage {
 function CommitAndPush {
     param([string]$msg)
 
-    git add .
+    git add -A "js-files"  # Add all files in the "js-files" folder
     git commit -m $msg
     git push
 }
@@ -86,4 +91,3 @@ CreateContent $name
 CommitAndPush $msg
 MergeBranch $branch
 DeleteBranch $branch
-git push origin --delete $branch
