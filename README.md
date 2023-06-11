@@ -66,7 +66,7 @@ GitBot is a PowerShell script designed to automate common Git operations and sim
 
    This will create a scheduled task in Windows Task Scheduler, triggering the GitBot script based on the configured schedule.
 
-3. Repeat the above  2 steps if you want to reschedule the GitBot process.
+3. Repeat the above 2 steps if you want to reschedule the GitBot process.
 
 That's it! You have successfully set up and used GitBot to automate your Git workflows.
 
