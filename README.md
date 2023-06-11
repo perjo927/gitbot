@@ -54,7 +54,7 @@ GitBot is a PowerShell script designed to automate common Git operations and sim
 
 ### Scheduling
 
-1. Open a PowerShell terminal or Command prompt Windowand navigate to the `GitBot repository folder` again.
+1. Open a PowerShell terminal or Command prompt window and navigate to the `GitBot repository folder` again.
 
 2. Execute the `schedule_task.ps1` script using the following command:
 
